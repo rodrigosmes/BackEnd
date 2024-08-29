@@ -1,0 +1,27 @@
+<html>
+<head>
+    <body>
+        <h1>Listagem de tarefas</h1>
+        <a href="/create">Criar tarefa</a>
+        <br />
+        <br />
+        <table border = "1px">
+            <tr>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Responsavel</td>
+                <td>Status</td>
+                <td>Data de Criação</td>
+                <td>Ações</td>
+            </tr>
+            <tr th:each = "task : ${listaTarefas}">
+                <td>${task.id}</td>
+                <td>${task.name}</td>
+                <td>${task.owner}</td>
+                <td>${task.status}</td>
+                <td>${task.creatDate}</td>
+            </tr>
+        </table>
+    </body>
+</head>
+</html>
